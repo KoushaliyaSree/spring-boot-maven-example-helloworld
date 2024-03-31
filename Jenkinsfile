@@ -10,9 +10,14 @@ pipeline {
 
         stage('mvn build')  {
             steps {
-                sh 'mvn clean package'
+                sh 'mvn clean install package'
+                sh 'mvn deploy'
+                sh 'mvn tomcat9:deploy'
+
             }
         }
+
+        
 
     }
 }
