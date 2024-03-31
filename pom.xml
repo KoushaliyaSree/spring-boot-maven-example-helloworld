@@ -32,6 +32,12 @@
             <artifactId>tomcat-embed-jasper</artifactId>
             <scope>provided</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>6.2.0.Final</version> <!-- Use the latest version compatible with your Spring Boot version -->
+       </dependency>
     </dependencies>
     <build>
         <plugins>
