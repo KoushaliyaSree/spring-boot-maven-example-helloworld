@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('GIT Clone') {
+            steps {
+                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/KoushaliyaSree/spring-boot-maven-example-helloworld.git']])
+            }
+        }
+    }
+}
