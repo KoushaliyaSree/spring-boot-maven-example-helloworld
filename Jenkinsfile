@@ -26,8 +26,7 @@ pipeline {
             steps {
                 // Ensure you have configured Tomcat credentials in Jenkins Credential Store
                 script {
-                    deploy adapters: [tomcat9(credentialsId: '289321d4-3b25-4a1a-8b37-7b34471eae6d', path: '/SpringBootMavenExample', url: 'http://localhost:8081/manager/text')],
-                            war: 'target/*.war', contextPath: '/SpringBootMavenExample', onFailure: true
+                    deploy adapters: [tomcat9(credentialsId: '289321d4-3b25-4a1a-8b37-7b34471eae6d', path: '', url: 'http://localhost:8081')], contextPath: 'SpringBootMavenExample', war: '**/*.war'
                 }
             }
         }
