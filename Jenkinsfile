@@ -6,19 +6,12 @@ pipeline {
 	}
 
     stages {
-        stage('Checkout') {
-            steps {
-                // Replace 'url' with the URL of your Git repository
-                git url: 'https://github.com/KoushaliyaSree/spring-boot-maven-example-helloworld.git', branch: 'main'
-            }
-        }
 
         stage('Build') {
             steps {
-                script {
+                
                     // Use Maven to build the project (assumes pom.xml is at the root of the project)
-                    sh "${MAVEN_HOME}/bin/mvn clean package"
-                }
+                    sh "mvn clean package"
             }
         }
 
