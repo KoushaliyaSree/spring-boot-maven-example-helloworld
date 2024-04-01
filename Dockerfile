@@ -24,3 +24,4 @@ EXPOSE 8081
 
 # Define the command to start the servlet container
 CMD ["catalina.sh", "run"]
+ 
